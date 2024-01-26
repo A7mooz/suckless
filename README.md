@@ -18,3 +18,5 @@ Of course you may need more dependencies but I only included the ones that may n
 And the names are taken from the Arch repositories so you need to see what they are in your system.
 
 Disclaimer: This project is not widely test and could break one's system if not careful. USE AT YOUR OWN RISK THERE ARE NO WARRANTIES.
+
+![2024-01-26_13-30](https://github.com/A7mooz/suckless/assets/57980136/964f211d-213e-4023-9b3e-9db7ca7a1811)
