@@ -15,6 +15,6 @@ Note: You need to enable using xbacklight with no password in the sudoers file l
 replace `%wheel` with whatever group/user you want
 
 Of course you may need more dependencies but I only included the ones that may not be on your system.
-And the names are taken from the Arch repositories so yeah need to see what they are in your system.
+And the names are taken from the Arch repositories so you need to see what they are in your system.
 
 Disclaimer: This project is not widely test and could break one's system if not careful. USE AT YOUR OWN RISK THERE ARE NO WARRANTIES.
