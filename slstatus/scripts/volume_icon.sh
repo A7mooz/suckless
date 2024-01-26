@@ -1,9 +1,9 @@
 #!/bin/sh
 
-muted=$(pacmd list-sinks | awk '/muted/ { print $2 }')
+switch=$(amixer sget Master | awk -F"[" '/Left:/ { print $NF }' | sed 's/\]//')
 
 icon=" "
 
-[[ $muted = "yes" ]] && icon= 
+[[ $switch = "off" ]] && icon=" " 
 
 echo $icon

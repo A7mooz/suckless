@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* interval between updates (in ms) */
-const unsigned int interval = 1000;
+const unsigned int interval = 500;
 
 /* text to show if no value can be retrieved */
 static const char unknown_str[] = "n/a";
@@ -65,5 +65,12 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-	{ datetime, "%s",           "%F %T" },
+	{ username, "  %s ",         NULL       },
+	{ wifi_essid, " %s ",       "wlan0"    },
+	{ run_command, " %.5s%% ",  "xbacklight -get" }, 
+	{ run_command, "%s ",        "~/.config/suckless/slstatus/scripts/volume_icon.sh" },
+	{ run_command, "%s ",        "~/.config/suckless/slstatus/scripts/volume_perc.sh" },
+	{ battery_state, " %s",     "BAT0"     },
+	{ battery_perc, "%s%% ",     "BAT0"     },
+	{ datetime, " %s",          "%d/%m/%y %I:%M %p" },
 };

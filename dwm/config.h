@@ -72,15 +72,15 @@ static const char *termcmd[]  = { "st", NULL };
 
 static const char *filemgr[] = { "pcmanfm", NULL };
 
-static const char *ssfull[] =  { "/usr/bin/flameshot", "full", NULL };
-static const char *ssgui[] =   { "/usr/bin/flameshot", "gui", NULL };
+static const char *ssfull[] =  { "flameshot", "full", NULL };
+static const char *ssgui[] =   { "flameshot", "gui", NULL };
 
-static const char *upvol[] =   { "amixer", "-q", "set", "Master", "5%+", "unmute", NULL };
-static const char *downvol[] = { "amixer", "-q", "set", "Master", "5%-", NULL };
-static const char *mutevol[] = { "amixer", "-q", "set", "Master", "toggle", NULL };
+static const char *upvol[]      = { "amixer", "-q" ,"set", "Master", "5%+", NULL };
+static const char *downvol[]    = { "amixer", "-q", "set", "Master", "5%-", NULL };
+static const char *mutevol[]    = { "amixer", "-q", "set", "Master", "toggle", NULL };
 
-static const char *light_up[]   = { "/usr/bin/xbacklight", "-inc", "5", NULL };
-static const char *light_down[] = { "/usr/bin/xbacklight", "-dec", "5", NULL };
+static const char *light_up[]   = { "sudo", "xbacklight", "-inc", "5", NULL };
+static const char *light_down[] = { "sudo", "xbacklight", "-dec", "5", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */

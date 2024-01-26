@@ -70,15 +70,17 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
 
-static const char *ssfull[] =  { "/usr/bin/flameshot", "full", NULL };
-static const char *ssgui[] =   { "/usr/bin/flameshot", "gui", NULL };
+static const char *filemgr[] = { "pcmanfm", NULL };
 
-static const char *upvol[] =   { "amixer", "-q", "set", "Master", "5%+", "unmute", NULL };
-static const char *downvol[] = { "amixer", "-q", "set", "Master", "5%-", NULL };
-static const char *mutevol[] = { "amixer", "-q", "set", "Master", "toggle", NULL };
+static const char *ssfull[] =  { "flameshot", "full", NULL };
+static const char *ssgui[] =   { "flameshot", "gui", NULL };
 
-static const char *light_up[]   = { "/usr/bin/xbacklight", "-inc", "5", NULL };
-static const char *light_down[] = { "/usr/bin/xbacklight", "-dec", "5", NULL };
+static const char *upvol[]      = { "amixer", "-q" ,"set", "Master", "5%+", NULL };
+static const char *downvol[]    = { "amixer", "-q", "set", "Master", "5%-", NULL };
+static const char *mutevol[]    = { "amixer", "-q", "set", "Master", "toggle", NULL };
+
+static const char *light_up[]   = { "sudo", "xbacklight", "-inc", "5", NULL };
+static const char *light_down[] = { "sudo", "xbacklight", "-dec", "5", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -106,6 +108,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ Mod1Mask,             	XK_Tab,    altTabStart,	   {0} },
+	{ MODKEY,                       XK_e,      spawn,          {.v = filemgr } },
 	{ 0,                            XF86XK_AudioLowerVolume,  spawn, {.v = downvol } },
 	{ 0,                            XF86XK_AudioMute,  spawn, {.v = mutevol } },
 	{ 0,                            XF86XK_AudioRaiseVolume,  spawn, {.v = upvol   } },
