@@ -1,0 +1,1 @@
+flameshot xorg-xbacklight pcmanfm alsa-utils pipewire wireplumber pipewire-pulse pipewire-alsa clipmenu rofimoji
