@@ -27,7 +27,7 @@ done
 
 echo -e "\n"
 
-$ref/scripts/confirm.sh "Do you want to to install the suckless utilities? (y/n) " " " " " || exit
+$ref/scripts/confirm.sh "Do you want to to install the suckless utilities (asks for $SUDO password)? (y/n) " " " " " || exit
 
 SUCKLESS="$config_dir/suckless"
 dirs=($(ls -d $SUCKLESS/*/))
