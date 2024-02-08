@@ -32,5 +32,6 @@ You can run this on [Arch](https://archlinux.org)-based systems to install all t
 ```sh
 sudo pacman -S --needed $(cat dependencies.txt) $(cat fonts.txt)
 ```
+![2024-02-08_17-34](https://github.com/A7mooz/suckless/assets/57980136/5474fdd3-c250-42ab-872a-22cc69a767b6)
 
 **Disclaimer**: This project is not widely test and could break one's system if not careful. USE AT YOUR OWN RISK THERE ARE NO WARRANTIES.
